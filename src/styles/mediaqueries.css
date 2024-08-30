@@ -1,0 +1,21 @@
+/* Par défaut : Styles pour les mobiles en mode vertical */
+
+/* Petits appareils (ex. téléphones en mode horizontal) */
+@media (min-width: 576px) {
+}
+
+/* Appareils moyens (ex. tablettes) */
+@media (min-width: 768px) {
+}
+
+/* Grands appareils (ex. ordinateurs portables) */
+@media (min-width: 992px) {
+}
+
+/* Très grands appareils (ex. grands écrans) */
+@media (min-width: 1200px) {
+}
+
+/* Écrans extra-larges (ex. écrans 4K) */
+@media (min-width: 1400px) {
+}

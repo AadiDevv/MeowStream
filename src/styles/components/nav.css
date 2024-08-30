@@ -1,0 +1,174 @@
+.off-screen-menu {
+    width: 80%;
+    height: 100vh;
+    background-color: rgba(177, 82, 28, 0.945);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -1000px;
+    transition: .3s ease;
+    max-width: 400px;
+  }
+  .off-screen-menu.active {
+    left : 0;
+  }
+    /* icon */
+    .burger-icon_container{
+      width: 100vw;
+      padding: 1rem;
+      position: fixed;
+      background-color: #00000000;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content:left;
+      z-index: 2;
+    }
+    .burger-icon {
+      height: 50px;
+      width: 50px;
+      position: relative;
+    }
+    .burger-icon span{
+    height: 5px;
+    width: 100%;
+    background-color: #FFA100;
+    position: absolute;
+    border-radius: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: .3s ease;
+    }
+    .burger-icon span:nth-child(1){
+      top: 25%;
+    }
+    .burger-icon span:nth-child(3){
+      top: 75%;
+    }
+    .burger-icon.active span{
+      background-color: #fff;
+    }
+    .burger-icon.active span:nth-child(1){
+      top: 50%;
+      transform: translate(-50%,-50%) rotate(45deg);
+    }
+    .burger-icon.active span:nth-child(2){
+      opacity: 0;
+    }
+    .burger-icon.active span:nth-child(3){
+      top: 50%;
+      transform: translate(-50%,-50%) rotate(-45deg);
+    }
+  
+  
+  .menu {
+    list-style: none;
+    padding-left: 50px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content: right;
+    /* border: 1px solid #ccc; */
+  }
+  
+  .menu li {
+  text-align: left;
+  padding: 40px 20px;
+  width: 90%;
+  
+  }
+  .menu li:hover {
+    background-color: #272727;
+    }
+  
+  .menu li a, .dropdown-label {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: var(--font-size-h1);
+    
+  }
+  .dropdown-label {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
+  .dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+  }
+  .dropdown-toggle-genre, .dropdown-toggle-rating{
+    display: none;
+  }
+  .dropdown-toggle-genre:checked ~ .dropdown-genre {
+    display: block;
+  }
+  .dropdown-toggle-genre:checked ~ .dropdown-label .icon {
+    transform: rotate(-90deg);
+}
+  .dropdown-toggle-rating:checked ~ .dropdown-rating {
+    display: block;
+  }
+  .dropdown-toggle-rating:checked ~ .dropdown-label .icon {
+    transform: rotate(-90deg);
+}
+  .dropdown li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #bbb;
+  }
+  
+  .dropdown li button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: var(--font-size-small);
+  }
+  .dropdown li button:hover {
+   color: #FFA100;
+  }
+  
+  .dropdown li:hover{
+    border-color: #FFA100;
+  }
+  
+  .icon{
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+  }
+
+  /* Petits appareils (ex. téléphones en mode horizontal) */
+@media (min-width: 576px) {
+}
+
+/* Appareils moyens (ex. tablettes) */
+@media (min-width: 768px) {
+}
+
+/* Grands appareils (ex. ordinateurs portables) */
+@media (min-width: 992px) {
+  .menu li a, .dropdown-label {
+    font-size: var(--font-size-h2);
+  }
+}
+
+/* Très grands appareils (ex. grands écrans) */
+@media (min-width: 1200px) {
+ 
+}
+
+/* Écrans extra-larges (ex. écrans 4K) */
+@media (min-width: 1400px) {
+  .menu li a, .dropdown-label {
+    font-size: 32px;
+  }
+}

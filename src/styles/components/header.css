@@ -1,0 +1,18 @@
+logo {
+    width: 100%;
+    /* min-width: 400px; */
+    max-width: 920px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .app-subtitle {
+    text-align: center;
+    margin: 25px auto;
+    font-weight: 300;
+    font-size: var(--font-size-h1);
+    padding: 0px 70px 70px 70px;
+    
+    border-bottom: 1px solid grey;
+  }
+  
